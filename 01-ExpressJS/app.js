@@ -24,5 +24,6 @@ const app = express()
 
 /* ENV */
 
-
+require('dotenv').config()
+console.log(process.env)
 
