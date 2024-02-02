@@ -19,11 +19,13 @@
 
 // ExpressJs Start
 
-const express = require('express')
-const app = express()
+const express = require ('express');
+const app = express ();
 
 /* ENV */
 
-require('dotenv').config()
-console.log(process.env)
+require ('dotenv').config ();
+const HOST = process.env.HOST || 'http://localhost';
+const PORT = process.env.PORT || 8000; // port ismi buyuk harfle baslarsa sabit oldugunu anlariz porta dokunmayiz
 
+app.listen(PORT, () => console.log(`Running on ${HOST}:${PORT}`));
