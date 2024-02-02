@@ -33,7 +33,7 @@ const PORT = process.env.PORT || 8000; // port ismi buyuk harfle baslarsa sabit 
 
 
 
-
+app.get('/' , () => { request, response})  // paramatre hangi url kullanici bu ur lhangi parametre ile gelirse o request veya response calisacak 
 
 
 
