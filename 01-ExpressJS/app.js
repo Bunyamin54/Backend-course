@@ -28,4 +28,37 @@ require ('dotenv').config ();
 const HOST = process.env.HOST || 'http://localhost';
 const PORT = process.env.PORT || 8000; // port ismi buyuk harfle baslarsa sabit oldugunu anlariz porta dokunmayiz
 
+
+/*   Methods */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 app.listen(PORT, () => console.log(`Running on ${HOST}:${PORT}`));
