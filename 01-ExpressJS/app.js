@@ -76,7 +76,7 @@ app.get ('/path', (req, res) => res.send ("in  'path' ")); // '/path' == '/path/
 // app.get(/^\/xyz/, (req, res) => res.send("regexp /^\/xyz/")) // url startswith = 'xyz'  //*^ sapka ile baslar ise xyz ile baslar ise kabul et diyoruz
 // app.get(/xyz$/, (req, res) => res.send("regexp /xyz$/")) // url endswith = 'xyz'  $ isareti ile biterse sonda xyz olmak zorunda
 
-
+/* URL Parameters (req.params) */
 
 
 
