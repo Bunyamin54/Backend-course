@@ -61,4 +61,4 @@ app.get('/' , () => { request, response})  // paramatre hangi url kullanici bu u
 
 
 
-app.listen(PORT, () => console.log(`Running on ${HOST}:${PORT}`));
+app.listen(PORT,HOST, () => console.log(`Running on http://${HOST}:${PORT}`));
