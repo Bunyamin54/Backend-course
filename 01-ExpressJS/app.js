@@ -30,23 +30,29 @@ const PORT = process.env.PORT || 8000; // port ismi buyuk harfle baslarsa sabit 
 
 /*   Methods */
 
-app.get ('/', (request, response) => {
+// app.get ('/', (request, response) => {
   // response.send('Welcome to Express')  // string bir veri html formatinda gonderilir
 
-  response.send ({message: 'called in "get" method '}); // obje yaparsak otomatikmen Json a cevirir bvunu respons send yapiyor
-}); // paramatre hangi url kullanici bu ur lhangi parametre ile gelirse o request veya response calisacak
+//   response.send ({message: 'called in "get" method '}); // obje yaparsak otomatikmen Json a cevirir bvunu respons send yapiyor
+// }); // paramatre hangi url kullanici bu ur lhangi parametre ile gelirse o request veya response calisacak
 
-app.post ('/', (request, response) =>
-  response.send ({message: "called in 'post' method."})
-);
-app.put ('/', (request, response) =>
-  response.send ({message: "called in 'put' method."})
-);
-app.delete ('/', (request, response) =>
-  response.send ({message: "called in 'delete' method."})
-);
+// app.post ('/', (request, response) =>
+//   response.send ({message: "called in 'post' method."})
+// );
+// app.put ('/', (request, response) =>
+//   response.send ({message: "called in 'put' method."})
+// );
+// app.delete ('/', (request, response) =>
+//   response.send ({message: "called in 'delete' method."})
+// );
+
+ //? allow at all methods:
+ app.all('/', (request, response) => response.send({ message: "'all' option allows to all methods."}))  // bunlarin yerine all methodunu kullanirsak tamamina cevp aliriz  tum methodlara izin ver demeke
+
 
 /* HTTP_Methods & URLs */
+
+
 
 // app.get('/', (request, response) => {
 //     //? run response.send for print-out:
@@ -56,7 +62,7 @@ app.delete ('/', (request, response) =>
 // app.post('/', (request, response) => response.send({ message: "called in 'post' method."}))
 // app.put('/', (request, response) => response.send({ message: "called in 'put' method."}))
 // app.delete('/', (request, response) => response.send({ message: "called in 'delete' method."}))
-// //? allow at all methods:
+ //? allow at all methods:
 // app.all('/', (request, response) => response.send({ message: "'all' option allows to all methods."}))
 
 //? app.route('url'):
