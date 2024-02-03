@@ -71,8 +71,10 @@ app.get ('/path', (req, res) => res.send ("in  'path' ")); // '/path' == '/path/
 // app.get ('/abc(x+)123', (req, res) => res.send ("in 'abc(x+)123' ")); //*  +  sadece yazdigim karaktere izin ver demeektir.
 // app.get ('/abc*?123', (req, res) => res.send ("in 'abc(x*)123' ")); // * karakter limiti yok arada ne olursa olsun demeke
 
-
 //? express-urls supported regexp:
+// app.get (/xyz/, (req, res) => res.send ("regepx /xyz/ ")); //* url xyz iceriyorsa bunu kabul et demek.
+// app.get(/^\/xyz/, (req, res) => res.send("regexp /^\/xyz/")) // url startswith = 'xyz'  //*^ sapka ile baslar ise xyz ile baslar ise kabul et diyoruz
+// app.get(/xyz$/, (req, res) => res.send("regexp /xyz$/")) // url endswith = 'xyz'  $ isareti ile biterse sonda xyz olmak zorunda
 
 
 
@@ -83,8 +85,9 @@ app.get ('/path', (req, res) => res.send ("in  'path' ")); // '/path' == '/path/
 
 
 
-
-
+// app.get(/xyz/, (req, res) => res.send("regexp /xyz/")) // url contains = 'xyz' (no limit for subPaths)
+// app.get(/^\/xyz/, (req, res) => res.send("regexp /^\/xyz/")) // url startswith = 'xyz'
+// app.get(/xyz$/, (req, res) => res.send("regexp /xyz$/")) // url endswith = 'xyz'
 
 /* ------------------------------------------------------- */
 /* URL (Path) Options */
