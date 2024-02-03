@@ -78,32 +78,8 @@ app.get ('/path', (req, res) => res.send ("in  'path' ")); // '/path' == '/path/
 
 /* URL Parameters (req.params) */
 
+// /user/99/config/update/any/any  user sabit ama diger veriler degisebilir  * yildizdan sonra her sey gelebilir bizim icin ilk 4 parametere onemli 
 
-
-
-
-
-
-
-// app.get(/xyz/, (req, res) => res.send("regexp /xyz/")) // url contains = 'xyz' (no limit for subPaths)
-// app.get(/^\/xyz/, (req, res) => res.send("regexp /^\/xyz/")) // url startswith = 'xyz'
-// app.get(/xyz$/, (req, res) => res.send("regexp /xyz$/")) // url endswith = 'xyz'
-
-/* ------------------------------------------------------- */
-/* URL (Path) Options */
-
-// app.get('/', (req, res) => res.send("in 'root' path")) // '/' == root
-// app.get('/path', (req, res) => res.send("in 'path'")) // '/path' == '/path/'
-// //? express-urls supported JokerChar:
-// app.get('/abc(x?)123', (req, res) => res.send("in 'abc(x?)123'")) // abc123 or abcx123
-// app.get('/abc(x+)123', (req, res) => res.send("in 'abc(x+)123'")) // abcx123 or abcxx..xx123
-// app.get('/abc*123', (req, res) => res.send("in 'abc*123'")) // abc123 or abc...123 // abc(ANY)123
-//? express-urls supported regexp:
-// app.get(/xyz/, (req, res) => res.send("regexp /xyz/")) // url contains = 'xyz' (no limit for subPaths)
-// app.get(/^\/xyz/, (req, res) => res.send("regexp /^\/xyz/")) // url startswith = 'xyz'
-// app.get(/xyz$/, (req, res) => res.send("regexp /xyz$/")) // url endswith = 'xyz'
-
-/* ------------------------------------------------------- */
 /* URL Parameters (req.params) */
 
 // /user/66/config/update/any/any/any
@@ -132,6 +108,9 @@ app.get ('/path', (req, res) => res.send ("in  'path' ")); // '/path' == '/path/
 //         params: req.params
 //     })
 // })
+
+
+
 
 // app.get('/command/:userId-:profileId', (req, res) => {
 //     res.send({
