@@ -51,10 +51,13 @@ const PORT = process.env.PORT || 8000; // port ismi buyuk harfle baslarsa sabit 
 //  app.all('/', (request, response) => response.send({ message: "'all' option allows to all methods."}))  // bunlarin yerine all methodunu kullanirsak tamamina cevp aliriz  tum methodlara izin ver demeke  guvenlik acisindan saglikli degil 
 
 
-//? app.route('url'):
+//? app.route('url'):   url sabit  methodlar degisir
 
-
-
+app.route('/')
+.get( (req, res) => res.send('get'))  // siralama onemli once req,sonra res
+.post( (req, res) => res.send('post')) 
+.put( (req, res) => res.send('put')) 
+.delete( (req, res) => res.send('delete')) 
 
 
 
