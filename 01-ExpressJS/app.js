@@ -67,7 +67,9 @@ app.get ('/path', (req, res) => res.send ("in  'path' ")); // '/path' == '/path/
 
 // //? express-urls supported JokerChar:
 
-app.get ('/abc(x?)123', (req, res) => res.send ("in 'abc(x?)123' ")); // tek bir karakter x olabilir veya olmayabilir diyoruz
+// app.get ('/abc(x?)123', (req, res) => res.send ("in 'abc(x?)123' ")); //* tek bir karakter x olabilir veya olmayabilir diyoruz
+app.get ('/abc(x+)123', (req, res) => res.send ("in 'abc(x+)123' ")); //*  +  sadece yazdigim karaktere izin ver demeektir.
+// app.get ('/abc*?123', (req, res) => res.send ("in 'abc(x*)123' ")); // * karakter limiti yok arada ne olursa olsun demeke
 
 
 
