@@ -62,8 +62,8 @@ app.route('/route')
 
 /* URL (Path) Options */
 
-app.get ('/', (req, res) => res.send ("in  'root' path")); // '/' ==root
-app.get ('/path', (req, res) => res.send ("in  'path' ")); // '/path' == '/path/'  sonuuna / koymak zorunda degiliz sistem her ikisinide algilayacak
+// app.get ('/', (req, res) => res.send ("in  'root' path")); // '/' ==root
+// app.get ('/path', (req, res) => res.send ("in  'path' ")); // '/path' == '/path/'  sonuuna / koymak zorunda degiliz sistem her ikisinide algilayacak
 
 // //? express-urls supported JokerChar:
 
@@ -122,13 +122,21 @@ app.get ('/path', (req, res) => res.send ("in  'path' ")); // '/path' == '/path/
 
 /* Response Methods */
 
+
+
+
+
 //? SendStatus:
 // app.get('/', (req, res) => res.sendStatus(404))
+
+
+
 //? Status:
 // app.get('/', (req, res) => res.status(200).send({ message: 'OK' }))
 // app.post('/', (req, res) => res.status(201).send({ message: 'Created' }))
 // app.put('/', (req, res) => res.status(202).send({ message: 'Accepted' }))
 // app.delete('/', (req, res) => res.status(204).send({ message: 'No Content' }))
+
 //? JSON (.send() method already does this converting.)
 // app.get('/', (req, res) => res.json([{ key: 'value' }]))
 //? Download File (Download at browser):
