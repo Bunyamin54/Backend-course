@@ -46,8 +46,20 @@ const PORT = process.env.PORT || 8000; // port ismi buyuk harfle baslarsa sabit 
 //   response.send ({message: "called in 'delete' method."})
 // );
 
- //? allow at all methods:
- app.all('/', (request, response) => response.send({ message: "'all' option allows to all methods."}))  // bunlarin yerine all methodunu kullanirsak tamamina cevp aliriz  tum methodlara izin ver demeke
+//  //? allow at all methods:
+
+//  app.all('/', (request, response) => response.send({ message: "'all' option allows to all methods."}))  // bunlarin yerine all methodunu kullanirsak tamamina cevp aliriz  tum methodlara izin ver demeke  guvenlik acisindan saglikli degil 
+
+
+//? app.route('url'):
+
+
+
+
+
+
+
+
 
 
 /* HTTP_Methods & URLs */
