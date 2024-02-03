@@ -33,32 +33,18 @@ const PORT = process.env.PORT || 8000; // port ismi buyuk harfle baslarsa sabit 
 app.get ('/', (request, response) => {
   // response.send('Welcome to Express')  // string bir veri html formatinda gonderilir
 
-  response.send ({message: 'called in "get" method '}); // obje yaparsak otomatikmen Json a cevirir bvunu respons send yapiyor 
+  response.send ({message: 'called in "get" method '}); // obje yaparsak otomatikmen Json a cevirir bvunu respons send yapiyor
 }); // paramatre hangi url kullanici bu ur lhangi parametre ile gelirse o request veya response calisacak
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+app.post ('/', (request, response) =>
+  response.send ({message: "called in 'post' method."})
+);
+app.put ('/', (request, response) =>
+  response.send ({message: "called in 'put' method."})
+);
+app.delete ('/', (request, response) =>
+  response.send ({message: "called in 'delete' method."})
+);
 
 /* HTTP_Methods & URLs */
 
@@ -153,7 +139,6 @@ app.get ('/', (request, response) => {
 
 /* ------------------------------------------------------- */
 // app.listen(PORT, () => console.log(`Running on http://127.0.0.1:${PORT}`))
-
 
 app.listen (PORT, HOST, () =>
   console.log (`Running on http://${HOST}:${PORT}`)
