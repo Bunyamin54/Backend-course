@@ -65,7 +65,7 @@ app.route('/route')
 app.get ('/', (req, res) => res.send ("in  'root' path")); // '/' ==root
 app.get ('/path', (req, res) => res.send ("in  'path' ")); // '/path' == '/path/'  sonuuna / koymak zorunda degiliz sistem her ikisinide algilayacak
 
-
+// //? express-urls supported JokerChar:
 
 
 
