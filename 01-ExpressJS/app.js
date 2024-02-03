@@ -62,6 +62,23 @@ app.route('/route')
 
 /* URL (Path) Options */
 
+app.get ('/', (req, res) => res.send ("in  'root' path")); // '/' ==root
+app.get ('/path', (req, res) => res.send ("in  'path' ")); // '/path' == '/path/'  sonuuna / koymak zorunda degiliz sistem her ikisinide algilayacak
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
